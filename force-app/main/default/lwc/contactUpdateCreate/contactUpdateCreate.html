@@ -1,0 +1,117 @@
+<template>
+
+    <lightning-card variant="Narrow" title={title}>
+
+        <div class="body">
+    
+            <template if:true={contactId}>
+                
+                <lightning-record-edit-form object-api-name="Contact" record-id={contactId}>
+
+                    <div class="slds-grid">
+            
+                        <div class="slds-col slds-size_1-of-2">
+            
+                            <label class="slds-form-element__label">First Name</label>
+                            <lightning-input-field class="FirstName" field-name="FirstName" variant="label-hidden"></lightning-input-field>
+            
+                        </div>
+            
+                        &nbsp;&nbsp;
+            
+                        <div class="slds-col slds-size_1-of-2">
+            
+                            <label class="slds-form-element__label">Last Name</label>
+                            <lightning-input-field class="LastName" field-name="LastName" variant="label-hidden"></lightning-input-field>
+            
+                        </div>
+            
+                    </div>
+        
+                    <br />
+                    
+                    <div class="slds-grid">
+            
+                        <div class="slds-col slds-size_1-of-2">
+            
+                            <label class="slds-form-element__label">Phone</label>
+                            <lightning-input-field class="Phone" field-name="Phone" variant="label-hidden"></lightning-input-field>
+            
+                        </div>
+            
+                        &nbsp;&nbsp;
+            
+                        <div class="slds-col slds-size_1-of-2">
+            
+                            <label class="slds-form-element__label">Email</label>
+                            <lightning-input-field class="Email" field-name="Email" variant="label-hidden"></lightning-input-field>
+            
+                        </div>
+            
+                    </div>
+        
+                </lightning-record-edit-form> 
+        
+            </template>
+        
+            <template if:false={contactId}>
+                
+                <lightning-record-edit-form object-api-name="Contact">
+        
+                    <div class="slds-grid">
+            
+                        <div class="slds-col slds-size_1-of-2">
+            
+                            <label class="slds-form-element__label">First Name</label>
+                            <lightning-input-field class="FirstName" field-name="FirstName" variant="label-hidden"></lightning-input-field>
+            
+                        </div>
+            
+                        &nbsp;&nbsp;
+            
+                        <div class="slds-col slds-size_1-of-2">
+            
+                            <label class="slds-form-element__label">Last Name</label>
+                            <lightning-input-field class="LastName" field-name="LastName" variant="label-hidden"></lightning-input-field>
+            
+                        </div>
+            
+                    </div>
+        
+                    <br />
+                    
+                    <div class="slds-grid">
+            
+                        <div class="slds-col slds-size_1-of-2">
+            
+                            <label class="slds-form-element__label">Phone</label>
+                            <lightning-input-field class="Phone" field-name="Phone" variant="label-hidden"></lightning-input-field>
+            
+                        </div>
+            
+                        &nbsp;&nbsp;
+            
+                        <div class="slds-col slds-size_1-of-2">
+            
+                            <label class="slds-form-element__label">Email</label>
+                            <lightning-input-field class="Email" field-name="Email" variant="label-hidden"></lightning-input-field>
+            
+                        </div>
+            
+                    </div>
+        
+                </lightning-record-edit-form> 
+        
+            </template>
+
+        </div>
+        
+        <footer slot="footer">
+            
+            <lightning-button variant="brand" label={buttonLabel} title="Primary action" onclick={run} class="slds-m-left_x-small"></lightning-button>
+
+        </footer>
+        
+    </lightning-card>
+
+</template>
