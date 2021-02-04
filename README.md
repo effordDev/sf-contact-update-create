@@ -10,7 +10,7 @@ name in the page setup and the component will handle the rest.
 
 Contains a public method to save/update the contact so it can easily be nested in parent components.
 
-![example](https://imgur.com/a/tiu6WAr)
+![example](https://imgur.com/z82XFUF)
 ## Deploy
 
 ### Click Deployment
